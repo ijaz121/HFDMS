@@ -14,5 +14,6 @@ namespace ResponseModel.HealthWorker
         public string? Email { get; set; }
         public string? PhoneNumber { get; set; }
         public string? HealthFacilityName { get; set; }
+        public string? HealthFacilityID { get; set; }
     }
 }

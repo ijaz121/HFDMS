@@ -10,6 +10,16 @@ namespace ResponseModel.Role
     {
         public string? RoleID { get; set; }
         public string? RoleName { get; set; }
-        public string? Permission { get; set; }
+    }
+
+    public class MappedDataResponse
+    {
+        public string? RoleId {get;set;}
+        public string? ActivityId  {get;set;}
+        public string? CanView {get;set;}
+        public string? CanUpdate   {get;set;}
+        public string? CanDelete {get;set;}
+        public string? CanCreate { get; set; }
+
     }
 }

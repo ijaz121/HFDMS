@@ -28,6 +28,7 @@ namespace Repository.Login
         public async Task<ResponseResult<LoginResponse>> Login(LoginRequest request)
         {
             ResponseResult<LoginResponse> responseResult = new ResponseResult<LoginResponse>();
+            LoginResponse? loginResponse = new LoginResponse();
 
             try
             {
@@ -38,11 +39,17 @@ namespace Repository.Login
                     { "@Password", request.Password }
                 };
 
-                DataTable dt = await _dbConnectionLogic.ExecuteSelectQueryAsync(query, param);
-                if (dt.Rows.Count > 0)
+                DataSet ds = await _dbConnectionLogic.ExecuteSelectQueryToDataSetAsync(query, param);
+                if (ds.Tables.Count > 0)
                 {
-                    // Assuming only one row should be returned for a successful login
-                    LoginResponse loginResponse = _listConverter.ConvertDataTable<LoginResponse>(dt).FirstOrDefault();
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        loginResponse = _listConverter.ConvertDataTable<LoginResponse>(ds.Tables[0]).FirstOrDefault();
+                    }
+                    if (ds.Tables[1].Rows.Count > 0)
+                    {
+                        loginResponse.Permission = _listConverter.ConvertDataTable<Permissions>(ds.Tables[1]);
+                    }
 
                     responseResult = new ResponseResult<LoginResponse>
                     {

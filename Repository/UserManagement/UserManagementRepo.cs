@@ -37,6 +37,7 @@ namespace Repository.UserManagement
                     { "@UserID", request.UserID },
                     { "@Name", request.Name },
                     { "@Email", request.Email },
+                    { "@Address", request.Address },
                     { "@PhoneNumber", request.PhoneNumber},
                     { "@RoleID", request.Role },
                     { "@AssignedHealthFacilityID", request.HealthFacilityId },

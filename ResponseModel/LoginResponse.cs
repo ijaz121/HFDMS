@@ -12,11 +12,21 @@ namespace ResponseModel
         public string? Name { get; set; }
         public string? RoleName { get; set; }
         public string? RoleId { get; set; }
-        public List<Permissions> Permission { get; set; }
+        public List<Permissions>? Permission { get; set; }
+
+        //LoginResponse()
+        //{
+        //    Permission = [];
+        //}
     }
 
     public class Permissions
     {
-        public string Page { get; set; }
+        public string? ActivityId { get; set; }
+        public string? ActivityName { get; set; }
+        public string? CanView { get; set; }
+        public string? CanUpdate   { get; set; }
+        public string? CanDelete { get; set; }
+        public string? CanCreate { get; set; }
     }
 }

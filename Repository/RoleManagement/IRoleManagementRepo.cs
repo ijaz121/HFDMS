@@ -16,5 +16,9 @@ namespace Repository.RoleManagement
         Task<ResponseResult<string>> InsertUpdateDeleteRole(RoleRequest request);
 
         Task<ResponseResult<List<RoleResponse>>> GetRoleData(UserRequest request);
+
+        Task<ResponseResult<string>> MapRole(MapRoleRequest request);
+
+        Task<ResponseResult<List<MappedDataResponse>>> GetMappedData(MappedDataRequest request);
     }
 }

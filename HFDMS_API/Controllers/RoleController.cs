@@ -5,6 +5,7 @@ using Repository.UserManagement;
 using RequestModel.Role;
 using RequestModel.User;
 using ResponseModel.BaseResponse;
+using ResponseModel.Role;
 
 namespace HFDMS_API.Controllers
 {
@@ -72,6 +73,69 @@ namespace HFDMS_API.Controllers
                 }
 
                 var response = await _roleManagementRepo.GetRoleData(request);
+
+                return Ok(response);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        [HttpPost("MapRole")]
+        public async Task<IActionResult> MapRole(MapRoleRequest request)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    string validationErrors = string.Join(",",
+                    ModelState.Values.Where(E => E.Errors.Count > 0)
+                    .SelectMany(E => E.Errors)
+                    .Select(E => E.ErrorMessage)
+                    .ToArray());
+
+                    return Ok(new ResponseResult<string>
+                    {
+                        StatusCode = "03",
+                        Message = validationErrors.ToString(),
+                        Data = null
+                    });
+                }
+
+                var response = await _roleManagementRepo.MapRole(request);
+
+                return Ok(response);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        [HttpPost("GetMappedData")]
+        public async Task<IActionResult> GetMappedData(MappedDataRequest request)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    string validationErrors = string.Join(",",
+                    ModelState.Values.Where(E => E.Errors.Count > 0)
+                    .SelectMany(E => E.Errors)
+                    .Select(E => E.ErrorMessage)
+                    .ToArray());
+
+                    return Ok(new ResponseResult<string>
+                    {
+                        StatusCode = "03",
+                        Message = validationErrors.ToString(),
+                        Data = null
+                    });
+                }
+
+                var response = await _roleManagementRepo.GetMappedData(request);
 
                 return Ok(response);
             }
