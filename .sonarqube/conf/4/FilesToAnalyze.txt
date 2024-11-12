@@ -1,0 +1,16 @@
+﻿C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\ActivityLog\ActivityLogRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\ActivityLog\IActivityLogRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\Dashboard\DashboardRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\Dashboard\IDashboardRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\HealthFacility\HealthFacilityRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\HealthFacility\IHealthFacilityRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\HealthWorker\HealthWorkerRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\HealthWorker\IHealthWorkerRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\Login\ILoginRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\Login\LoginRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\Patient\IPatientRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\Patient\PatientRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\RoleManagement\IRoleManagementRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\RoleManagement\RoleManagementRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\UserManagement\IUserManagementRepo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\Repository\UserManagement\UserManagementRepo.cs

@@ -1,0 +1,17 @@
+﻿C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\Controllers\ActivityLogController.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\Controllers\AuthController.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\Controllers\DashboardController.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\Controllers\HealthFacilityController.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\Controllers\HealthWorkerController.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\Controllers\PatientController.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\Controllers\RoleController.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\Controllers\UserController.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\Program.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\obj\Debug\net8.0\HFDMS_API.GlobalUsings.g.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\obj\Debug\net8.0\HFDMS_API.AssemblyInfo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\obj\Debug\net8.0\HFDMS_API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\appsettings.Development.json
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\appsettings.json
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\HFDMS_API.http
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\HFDMS_API\Properties\launchSettings.json

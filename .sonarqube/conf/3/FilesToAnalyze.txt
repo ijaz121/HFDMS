@@ -1,0 +1,9 @@
+﻿C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\CommonServices\Claims\ClaimValues.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\CommonServices\Claims\IClaimValues.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\CommonServices\EncyptionDecryption\EncyptDecryptService.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\CommonServices\EncyptionDecryption\IEncyptDecryptService.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\CommonServices\ListConverter\IListConverter.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\CommonServices\ListConverter\ListConverter.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\CommonServices\Logging\ActivityLog.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\CommonServices\Middleware\ActivityLogMiddleware.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\CommonServices\Middleware\AuthenticationMiddleware.cs

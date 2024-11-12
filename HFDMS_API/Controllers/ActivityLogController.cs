@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repository.ActivityLog;
 using Repository.HealthWorker;
@@ -7,6 +8,7 @@ using ResponseModel.BaseResponse;
 
 namespace HFDMS_API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ActivityLogController : ControllerBase

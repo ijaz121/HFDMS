@@ -1,0 +1,2 @@
+﻿C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\DAL\DbConnectionLogic.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\DAL\IDbConnectionLogic.cs

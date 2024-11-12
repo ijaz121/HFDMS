@@ -82,7 +82,8 @@ namespace Repository.Patient
             {
                 Hashtable Param = new Hashtable
                 {
-                    { "@ID", request.ID }
+                    { "@ID", request.ID },
+                    { "@UserID", request.UserId }
                 };
 
                 string Query = "SP_HFDMS_GetPatients";

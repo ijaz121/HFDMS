@@ -1,0 +1,6 @@
+﻿C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\RequestModel\HealthFacility\HealthFacilityRequest.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\RequestModel\HealthWorker\HealthWorkerRequest.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\RequestModel\Login\LoginRequest.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\RequestModel\Patient\PatientRequest.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\RequestModel\Role\RoleRequest.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\RequestModel\User\UserRequest.cs

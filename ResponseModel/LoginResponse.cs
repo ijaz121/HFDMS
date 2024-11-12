@@ -12,12 +12,8 @@ namespace ResponseModel
         public string? Name { get; set; }
         public string? RoleName { get; set; }
         public string? RoleId { get; set; }
+        public string? Token { get; set; }
         public List<Permissions>? Permission { get; set; }
-
-        //LoginResponse()
-        //{
-        //    Permission = [];
-        //}
     }
 
     public class Permissions

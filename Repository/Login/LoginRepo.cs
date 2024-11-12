@@ -1,5 +1,8 @@
-﻿using CommonServices.ListConverter;
+﻿using CommonServices.EncyptionDecryption;
+using CommonServices.ListConverter;
 using DAL;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using RequestModel.HealthWorker;
 using RequestModel.Login;
 using ResponseModel;
@@ -9,7 +12,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,10 +24,14 @@ namespace Repository.Login
     {
         private IListConverter _listConverter;
         private IDbConnectionLogic _dbConnectionLogic;
-        public LoginRepo(IListConverter listConverter, IDbConnectionLogic dbConnectionLogic)
+        private readonly IConfiguration _configuration;
+        private readonly IEncyptDecryptService _encyptDecryptService;
+        public LoginRepo(IListConverter listConverter, IDbConnectionLogic dbConnectionLogic, IConfiguration configuration, IEncyptDecryptService encyptDecryptService)
         {
             _listConverter = listConverter;
             _dbConnectionLogic = dbConnectionLogic;
+            _configuration = configuration;
+            _encyptDecryptService = encyptDecryptService;
         }
         
         public async Task<ResponseResult<LoginResponse>> Login(LoginRequest request)
@@ -50,6 +59,9 @@ namespace Repository.Login
                     {
                         loginResponse.Permission = _listConverter.ConvertDataTable<Permissions>(ds.Tables[1]);
                     }
+
+                    var token = GenerateJwtToken(loginResponse);
+                    loginResponse.Token = token;
 
                     responseResult = new ResponseResult<LoginResponse>
                     {
@@ -85,6 +97,28 @@ namespace Repository.Login
             }
         }
 
+        private string GenerateJwtToken(LoginResponse user)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_configuration.GetSection("JwtSettings:Key").Value);
+
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[]
+                {
+                    new Claim(ClaimTypes.NameIdentifier, _encyptDecryptService.EncryptPayload(user.UserId)),
+                    new Claim(ClaimTypes.Name, _encyptDecryptService.EncryptPayload(user.Name)),
+                    new Claim(ClaimTypes.Role, _encyptDecryptService.EncryptPayload(user.RoleName))
+                }),
+                Expires = DateTime.UtcNow.AddHours(1),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
+                Audience = _configuration.GetSection("JwtSettings:Audience").Value, // Add the Audience
+                Issuer = _configuration.GetSection("JwtSettings:Issuer").Value // Optionally, add the Issuer as well
+            };
+
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
+        }
 
     }
 }

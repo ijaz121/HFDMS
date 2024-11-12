@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CommonServices.Claims;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repository.Dashboard;
 using Repository.Login;
@@ -6,15 +8,18 @@ using ResponseModel.BaseResponse;
 
 namespace HFDMS_API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class DashboardController : ControllerBase
     {
         private readonly IDashboardRepo _dashboardRepo;
+        private readonly IClaimValues _claimValues;
 
-        public DashboardController(IDashboardRepo dashboardRepo)
+        public DashboardController(IDashboardRepo dashboardRepo, IClaimValues claimValues)
         {
             _dashboardRepo = dashboardRepo;
+            _claimValues = claimValues;
         }
 
         [HttpGet("GetPatientPerHealthFacility")]

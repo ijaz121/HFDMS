@@ -8,6 +8,7 @@ namespace RequestModel.Patient
 {
     public class PatientRequest
     {
+        public string? UserId {get; set; }
         public string? ID {get; set; }
         public string? Name {get; set; }
         public string? Gender {get; set; }

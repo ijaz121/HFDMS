@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repository.HealthFacility;
 using RequestModel.HealthFacility;
@@ -7,6 +8,7 @@ using System.Net;
 
 namespace HFDMS_API.Controllers
 {
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class HealthFacilityController : ControllerBase

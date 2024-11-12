@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repository.Login;
 using Repository.RoleManagement;
@@ -8,6 +9,7 @@ using ResponseModel.BaseResponse;
 
 namespace HFDMS_API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -19,6 +21,7 @@ namespace HFDMS_API.Controllers
             _loginRepo = loginRepo;
         }
 
+        [AllowAnonymous]
         [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginRequest request)
         {

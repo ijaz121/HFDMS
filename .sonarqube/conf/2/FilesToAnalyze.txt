@@ -1,0 +1,10 @@
+﻿C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\ResponseModel\Activity\ActivityLogModel.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\ResponseModel\BaseResponse\ResponseResult.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\ResponseModel\Dashboard\DashboardResponse.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\ResponseModel\HealthFacility\GetHealthFacilityResponse.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\ResponseModel\HealthWorker\GetHealthWorkerResponse.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\ResponseModel\LoginResponse.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\ResponseModel\Patient\PatientResponse.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\ResponseModel\Role\MapRoleRequest.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\ResponseModel\Role\RoleResponse.cs
+C:\Users\ijaz.ali\Desktop\HFDMS\HFDMS_API\ResponseModel\User\UserResponse.cs
